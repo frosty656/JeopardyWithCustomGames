@@ -1,0 +1,451 @@
+{
+  "id": "7488",
+  "game_title": "Halloween2022",
+  "game_comments": "Custom game for Halloween 2022",
+  "game_complete": true,
+  "category_J_1": {
+    "category_name": "Who's House?",
+    "category_comments": "",
+    "clue_count": 5
+  },
+  "category_J_2": {
+    "category_name": "Name That Movie",
+    "category_comments": "",
+    "clue_count": 5
+  },
+  "category_J_3": {
+    "category_name": "Main Character",
+    "category_comments": "",
+    "clue_count": 5
+  },
+  "category_J_4": {
+    "category_name": "Networks",
+    "category_comments": "",
+    "clue_count": 5
+  },
+  "category_J_5": {
+    "category_name": "Who is this IRL",
+    "category_comments": "",
+    "clue_count": 5
+  },
+  "category_J_6": {
+    "category_name": "N/A",
+    "category_comments": "",
+    "clue_count": 5
+  },
+  "clue_J_1_1": {
+    "id": "437001",
+    "clue_html": "Who's house is this?",
+    "clue_text": "Who's house is this",
+    "correct_response": "Sandy Cheeks",
+    "media": ["https://i.stack.imgur.com/EEL6P.jpg"],
+    "daily_double": true
+  },
+  "clue_J_2_1": {
+    "id": "437002",
+    "clue_html": "What movie is this?",
+    "clue_text": "What movie is this",
+    "correct_response": "Cloudy with a change of meatballs",
+    "media": ["https://i.imgur.com/4s9cGZg.png"]
+  },
+  "clue_J_3_1": {
+    "id": "437003",
+    "clue_html": "Name these two twins who live in a hotel in Boston",
+    "clue_text": "Name these two twins who live in a hotel in Boston",
+    "correct_response": "Zach and Cody"
+  },
+  "clue_J_4_1": {
+    "id": "437006",
+    "clue_html": "This television network aired Max and Ruby, a show about two rabbits",
+    "clue_text": "This television network aired Max and Ruby, a show about two rabbits",
+    "correct_response": "Nick Jr or Nick"
+  },
+  "clue_J_5_1": {
+    "id": "437008",
+    "clue_html": "Who is this?",
+    "clue_text": "Who is this?",
+    "correct_response": "Selena Gomez",
+    "media": ["https://i.imgur.com/9KDofp9.png"]
+  },
+  "clue_J_6_1": {
+    "id": "437010",
+    "clue_html": "The &#xD6;resund Link, a bridge &amp; tunnel connecting Malm&#xF6;, Sweden to this Danish capital, opened July 1, 2000",
+    "clue_text": "The Öresund Link, a bridge & tunnel connecting Malmö, Sweden to this Danish capital, opened July 1, 2000",
+    "correct_response": "Copenhagen"
+  },
+  "clue_J_1_2": {
+    "id": "436992",
+    "clue_html": "Who's house is this",
+    "clue_text": "Who's house is this",
+    "correct_response": "Timmy Turners",
+    "media": ["https://i.imgur.com/Kl3qLAv.png"]
+  },
+  "clue_J_2_2": {
+    "id": "436988",
+    "clue_html": "What movie is this?",
+    "clue_text": "What movie is this",
+    "correct_response": "UP",
+    "media": ["https://i.imgur.com/Oi5IOSC.png"]
+  },
+  "clue_J_3_2": {
+    "id": "437004",
+    "clue_html": "This small girl goes on grand adventures with her friend monkey",
+    "clue_text": "This small girl goes on grand adventures with her friend monkey",
+    "correct_response": "Dora"
+  },
+  "clue_J_4_2": {
+    "id": "437007",
+    "clue_html": "Clifford the big red dog aired on this network",
+    "clue_text": "Clifford the big red dog aired on this network",
+    "correct_response": "PBS"
+  },
+  "clue_J_5_2": {
+    "id": "437009",
+    "clue_html": "Who is this?",
+    "clue_text": "Who is this?",
+    "correct_response": "Amanda Bynes",
+    "media": ["https://i.imgur.com/Jja0gFn.png"]
+  },
+  "clue_J_6_2": {
+    "id": "437011",
+    "clue_html": "This hypothetical creature represents a bridge between us &amp; our evolutionary ancestors",
+    "clue_text": "This hypothetical creature represents a bridge between us & our evolutionary ancestors",
+    "correct_response": "the missing link"
+  },
+  "clue_J_1_3": {
+    "id": "436993",
+    "clue_html": "Who's house is this",
+    "clue_text": "Who's house is this",
+    "correct_response": "Jimmy Neutron",
+    "media": ["https://i.imgur.com/jwSunpH.png"]
+  },
+  "clue_J_2_3": {
+    "id": "436985",
+    "clue_html": "What movie is this?",
+    "clue_text": "What movie is this",
+    "correct_response": "ratatouille",
+    "media": ["https://i.imgur.com/LcP2Gk2.png"]
+  },
+  "clue_J_3_3": {
+    "id": "437005",
+    "clue_html": "This characters hair resembles chocolate soft serve ice cream",
+    "clue_text": "This characters hair resembles chocolate soft serve ice cream",
+    "correct_response": "Jimmy Neutron"
+  },
+  "clue_J_4_3": {
+    "id": "436997",
+    "clue_html": "Spongebob aired on this tv network",
+    "clue_text": "Spongebob aired on this tv network",
+    "correct_response": "nickelodeon"
+  },
+  "clue_J_5_3": {
+    "id": "436998",
+    "clue_html": "Who is this?",
+    "clue_text": "Who is this?",
+    "correct_response": "Mylie Cyrus",
+    "media": ["https://i.imgur.com/3DF5Kgh.png"]
+  },
+  "clue_J_6_3": {
+    "id": "436999",
+    "clue_html": "To zoom around the web, you can click on a hotlink or this, which also starts with &quot;H&quot;",
+    "clue_text": "To zoom around the web, you can click on a hotlink or this, which also starts with \"H\"",
+    "correct_response": "hyperlink"
+  },
+  "clue_J_1_4": {
+    "id": "436983",
+    "clue_html": "Who's house is this",
+    "clue_text": "Who's house is this",
+    "correct_response": "Zach and Codys",
+    "media": ["https://i.imgur.com/1Fs7Ooa.png"]
+  },
+  "clue_J_2_4": {
+    "id": "436986",
+    "clue_html": "What movie is this?",
+    "clue_text": "What movie is this",
+    "correct_response": "WALLE",
+    "media": ["https://i.imgur.com/k41a4Vv.png"]
+  },
+  "clue_J_3_4": {
+    "id": "436994",
+    "triple_stumper": true,
+    "clue_html": "This character is living the best of both worlds",
+    "clue_text": "This character is living the best of both worlds",
+    "correct_response": "Hannah Montana"
+  },
+  "clue_J_4_4": {
+    "id": "436989",
+    "clue_html": "Thats So Raven aired on this tv network",
+    "clue_text": "Thats So Raven aired on this tv network",
+    "correct_response": "Disney Channel"
+  },
+  "clue_J_5_4": {
+    "clue_html": "Who is this?",
+    "clue_text": "Who is this?",
+    "correct_response": "Cole Sprouce",
+    "media": ["https://i.imgur.com/iZl4spe.png"]
+  },
+  "clue_J_6_4": {
+    "id": "437000",
+    "clue_html": "The name of this garland seen <a href=\"https://www.j-archive.com/media/2022-10-28_J_17.jpg\" target=\"_blank\">here</a> can also refer to any link of components in a series",
+    "clue_text": "The name of this garland seen here can also refer to any link of components in a series",
+    "correct_response": "a daisy chain",
+    "media": ["https://www.j-archive.com/media/2022-10-28_J_17.jpg"]
+  },
+  "clue_J_1_5": {
+    "id": "436984",
+    "clue_html": "Who's house is this",
+    "clue_text": "Who's house is this",
+    "correct_response": "Phineas and Ferb",
+    "media": ["https://i.imgur.com/G12ff2m.png"]
+  },
+  "clue_J_2_5": {
+    "id": "436987",
+    "clue_html": "What movie is this?",
+    "clue_text": "What movie is this",
+    "correct_response": "Cars",
+    "media": ["https://i.imgur.com/NJQZwQW.png"]
+  },
+  "clue_J_3_5": {
+    "id": "436995",
+    "clue_html": "This character fights bad guys with her side kick Rufus",
+    "clue_text": "This character fights bad guys with her side kick Rufus",
+    "correct_response": "Kim Possible"
+  },
+  "clue_J_4_5": {
+    "id": "436982",
+    "clue_html": "Kim possible aired on this tv network",
+    "clue_text": "Kim possible aired on this tv network",
+    "correct_response": "Disney Channel"
+  },
+  "clue_J_5_5": {
+    "id": "436991",
+    "clue_html": "Who is this?",
+    "clue_text": "Who is this?",
+    "correct_response": "Raven-Symoné",
+    "media": ["https://i.imgur.com/VkoeiWj.png"]
+  },
+  "clue_J_6_5": {
+    "id": "436996",
+    "clue_html": "In the &quot;Skyward Sword&quot; edition of this video game, Link searches for the title character after she&apos;s knocked out of the sky",
+    "clue_text": "In the \"Skyward Sword\" edition of this video game, Link searches for the title character after she's knocked out of the sky",
+    "correct_response": "Zelda"
+  },
+  "category_DJ_1": {
+    "category_name": "Catchphrase",
+    "category_comments": "",
+    "clue_count": 5
+  },
+  "category_DJ_2": {
+    "category_name": "Parents",
+    "category_comments": "",
+    "clue_count": 5
+  },
+  "category_DJ_3": {
+    "category_name": "Pets",
+    "category_comments": "",
+    "clue_count": 5
+  },
+  "category_DJ_4": {
+    "category_name": "Crushes",
+    "category_comments": "",
+    "clue_count": 5
+  },
+  "category_DJ_5": {
+    "category_name": "Villains",
+    "category_comments": "",
+    "clue_count": 5
+  },
+  "category_DJ_6": {
+    "category_name": "N/A",
+    "category_comments": "",
+    "clue_count": 5
+  },
+  "clue_DJ_1_1": {
+    "id": "437034",
+    "clue_html": "Spongebob often says I'm ____",
+    "clue_text": "Spongebob often says I'm ____",
+    "correct_response": "READY"
+  },
+  "clue_DJ_2_1": {
+    "id": "437036",
+    "clue_html": "The mother of Zach and Cody",
+    "clue_text": "The mother of Zach and Cody",
+    "correct_response": "Carey"
+  },
+  "clue_DJ_3_1": {
+    "id": "437038",
+    "clue_html": "What TYPE of pet does London Tipton have?",
+    "clue_text": "What TYPE of pet does London Tipton have?",
+    "correct_response": "Dog"
+  },
+  "clue_DJ_4_1": {
+    "id": "437040",
+    "clue_html": "Isabella from Phineas and Ferb always seemed to have an affinity for this character",
+    "clue_text": "Isabella from Phineas and Ferb always seemed to have an affinity for this character",
+    "correct_response": "Phineas"
+  },
+  "clue_DJ_5_1": {
+    "id": "437027",
+    "clue_html": "This character from Dora the Explorer always tried to prevent her from getting to her destination",
+    "clue_text": "This character from Dora the Explorer always tried to prevent her from getting to her destination",
+    "correct_response": "Swiper"
+  },
+  "clue_DJ_6_1": {
+    "id": "437029",
+    "clue_html": "Relationship of your grandchild &amp; your sibling&apos;s grandchild",
+    "clue_text": "Relationship of your grandchild & your sibling's grandchild",
+    "correct_response": "second cousin"
+  },
+  "clue_DJ_1_2": {
+    "id": "437035",
+    "clue_html": "Jimmy Neutron often says Brain ____",
+    "clue_text": "Jimmy Neutron often says Brain ____",
+    "correct_response": "Blast"
+  },
+  "clue_DJ_2_2": {
+    "id": "437037",
+    "clue_html": "The mother of Jimmy Neutron",
+    "clue_text": "The mother of Jimmy Neutron",
+    "correct_response": "Judy Or Judith"
+  },
+  "clue_DJ_3_2": {
+    "id": "437039",
+    "clue_html": "The pet of Phineas and Ferb",
+    "clue_text": "The pet of Phineas and Ferb",
+    "correct_response": "Perry the platypus"
+  },
+  "clue_DJ_4_2": {
+    "id": "437041",
+    "clue_html": "Mr Crabs has been in a relationship with this person for sixteen years!",
+    "clue_text": "Mr Crabs has been in a relationship with this person for sixteen years!",
+    "correct_response": "Mrs. Puff"
+  },
+  "clue_DJ_5_2": {
+    "id": "437028",
+    "clue_html": "This manager from the Suite life of Zack and Cody",
+    "clue_text": "This manager from the Suite life of Zack and Cody",
+    "correct_response": "Mr Moseby"
+  },
+  "clue_DJ_6_2": {
+    "id": "437030",
+    "clue_html": "A 1984 novel that starts, &quot;You are not the kind of guy who would be at a place like this...&quot; uses this point of view",
+    "clue_text": "A 1984 novel that starts, \"You are not the kind of guy who would be at a place like this...\" uses this point of view",
+    "correct_response": "second person"
+  },
+  "clue_DJ_1_3": {
+    "id": "437015",
+    "clue_html": "Phoenis from Phoenis and Ferb starts every episode by saying  ____",
+    "clue_text": "Phoenis from Phoenis and Ferb starts every episode by saying  ____",
+    "correct_response": "Ferb I know what we are going to do today"
+  },
+  "clue_DJ_2_3": {
+    "id": "437017",
+    "clue_html": "Father of Hannah Montana",
+    "clue_text": "Father of Hannah Montana",
+    "correct_response": "Billy Ray Cirus"
+  },
+  "clue_DJ_3_3": {
+    "id": "437022",
+    "clue_html": "Pet of Spongebob",
+    "clue_text": "Pet of spongebob",
+    "correct_response": "Gary the snail"
+  },
+  "clue_DJ_4_3": {
+    "id": "437012",
+    "clue_html": "Zach from Suite Life of Zack and Cody had his eyes set on this woman",
+    "clue_text": "Zach from Suite Life of Zack and Cody had his eyes set on this woman",
+    "correct_response": "Maddy"
+  },
+  "clue_DJ_5_3": {
+    "id": "437013",
+    "daily_double": true,
+    "clue_html": "This teacher from Fairly Odd Parents is always trying to prove that fairies are real",
+    "clue_text": "This teacher from Fairly Odd Parents is always trying to prove that fairies are real",
+    "correct_response": "Mr. Crocker"
+  },
+  "clue_DJ_6_3": {
+    "id": "437031",
+    "clue_html": "The lowest commissioned rank in the U.S. Army",
+    "clue_text": "The lowest commissioned rank in the U.S. Army",
+    "correct_response": "second lieutenant"
+  },
+  "clue_DJ_1_4": {
+    "id": "437016",
+    "clue_html": "Thats so Raven often says Oh ____",
+    "clue_text": "Thats so Raven often says Oh ____",
+    "correct_response": "Snap"
+  },
+  "clue_DJ_2_4": {
+    "id": "437018",
+    "clue_html": "The mother of Spongebob",
+    "clue_text": "The mother of Spongebob",
+    "correct_response": "Margret"
+  },
+  "clue_DJ_3_4": {
+    "id": "437023",
+    "clue_html": "What TYPE of pet does Kim Possible have?",
+    "clue_text": "What TYPE of pet does Kim Possible have?",
+    "correct_response": "Naked Mole Rat"
+  },
+  "clue_DJ_4_4": {
+    "id": "437025",
+    "clue_html": "Timmy from Fairly Odd Parents had his eyes set on this girl",
+    "clue_text": "Timmy from Fairly Odd Parents had his eyes set on this girl",
+    "correct_response": "Trixie"
+  },
+  "clue_DJ_5_4": {
+    "id": "437014",
+    "clue_html": "This Dr is always coming up with inventions that backfire",
+    "clue_text": "This Dr is always coming up with inventions that backfire",
+    "correct_response": "Dr Doofenshmirtz"
+  },
+  "clue_DJ_6_4": {
+    "id": "437032",
+    "clue_html": "Term for the government of France from 1848 to 1852",
+    "clue_text": "Term for the government of France from 1848 to 1852",
+    "correct_response": "the Second Republic"
+  },
+  "clue_DJ_1_5": {
+    "id": "437021",
+    "clue_html": "Often times when transition into a ghost Danny Phantom will say ____",
+    "clue_text": "Often times when transition into a ghost Danny Phantom will say ____",
+    "correct_response": "Going Ghost"
+  },
+  "clue_DJ_2_5": {
+    "id": "437019",
+    "triple_stumper": true,
+    "clue_html": "Mother of Phineas and Ferb",
+    "clue_text": "Mother of Phineas and Ferb",
+    "correct_response": "Linda"
+  },
+  "clue_DJ_3_5": {
+    "id": "437024",
+    "clue_html": "These boys never can seem to get INTO trouble",
+    "clue_text": "These boys never can seem to get INTO trouble",
+    "correct_response": "Phineas and Ferb"
+  },
+  "clue_DJ_4_5": {
+    "id": "437026",
+    "clue_html": "In Jimmy Neutron it is revealed that he and this classmate have feelings for each other",
+    "clue_text": "In Jimmy Neutron it is revealed that he and this classmate have feelings for each other",
+    "correct_response": "Cindy"
+  },
+  "clue_DJ_5_5": {
+    "id": "437020",
+    "clue_html": "This Spongebob character doesn't like how energetic Spongebob is",
+    "clue_text": "This Spongebob character doesn't like how energetic Spongebob is",
+    "correct_response": "Squidward"
+  },
+  "clue_DJ_6_5": {
+    "id": "437033",
+    "clue_html": "Formed in 43 B.C., this alliance was made up of Mark Antony, Lepidus &amp; Octavian",
+    "clue_text": "Formed in 43 B.C., this alliance was made up of Mark Antony, Lepidus & Octavian",
+    "correct_response": "the Second Triumvirate"
+  },
+  "category_FJ_1": { "category_name": "ARTISTS", "category_comments": "" },
+  "clue_FJ": {
+    "clue_html": "Sabena Airlines commissioned a painting by this artist, &quot;L&apos;Oiseau de Ciel&quot;, a bird whose body is filled with clouds in a blue sky",
+    "clue_text": "Sabena Airlines commissioned a painting by this artist, \"L'Oiseau de Ciel\", a bird whose body is filled with clouds in a blue sky",
+    "correct_response": "René Magritte"
+  }
+}

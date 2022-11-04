@@ -1,0 +1,17 @@
+
+div(ng-show="!has_team_name")
+    input.form-control(type='text', placeholder='Team name', ng-model='teamName' style="width: 100vw; height: 10vh; font-size: 50px;")
+    button.btn.btn-lg.btn-success(
+        type="button", 
+        ng-click='submit()'
+        style="width: 100vw; height: 90vh; font-size: 50px;"
+    ) Submit
+div(ng-show="has_team_name")
+    div.text-center(style="width: 100vw; height: 10vh; font-size: 50px;")
+        p {{teamName}}
+    button.btn.btn-lg.btn-success(
+        type="button", 
+        ng-click="press()" 
+        ng-style="{'background-color':can_buzz ? 'green' : 'red' }"
+        style="width: 100vw; height: 90vh; font-size: 100px;"
+    ) PRESS
