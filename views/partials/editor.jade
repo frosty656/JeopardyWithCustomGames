@@ -1,0 +1,44 @@
+nav.navbar.navbar-fixed-bottom
+     ul.nav.navbar-nav.navbar-right(style='padding-right:50px')
+        li
+          button.btn.btn-success.btn-lg(type="button", ng-click="save()") Save
+
+    form(style='width:50%;padding:10px' id="editor")
+        h1 Game Information
+        input.form-control(type='text', placeholder='Game Name', ng-model='game.game_title', id='game_title')
+        input.form-control(type='text', placeholder='Game Comments', ng-model='game.game_comments', id='game_comments')
+
+        each game in ['J', 'DJ', 'FJ']
+            if(game == 'J')
+                h1 Single Jeopardy
+            else if (game == 'DJ')
+                h1 Double Jeopardy
+            else 
+                h1 Final Jeopardy
+            each category in [1, 2, 3, 4, 5, 6]
+                if(game != 'FJ')
+                    h3 Category #{category}
+                    input.form-control(type='text', placeholder='Category Name', ng-model='game.category_#{game}_#{category}.category_name', id='clue_#{game}_#{category}.category_name')
+                    input.form-control(type='text', placeholder='Category Comments', ng-model='game.category_#{game}_#{category}.category_comments', id='clue_#{game}_#{category}.category_comments')
+
+                    each question in [1,2,3,4,5]
+                        if(game == 'J')
+                            h5 {{game.clue_#{game}_#{category}.category_name}} $#{question*200}
+                        else
+                            h5 {{game.clue_#{game}_#{category}.category_name}} $#{question*400}
+
+                        div.flex-row
+                            p3 Daily Double:
+                            input(type='checkbox' ng-model='game.clue_#{game}_#{category}_#{question}.daily_double', id='clue_#{game}_#{category}_#{question}.daily_double')
+                        input.form-control(type='text', placeholder='Clue', ng-model='game.clue_#{game}_#{category}_#{question}.clue_text', id='clue_#{game}_#{category}_#{question}.clue_text')
+                        input.form-control(type='text', placeholder='Response', ng-model='game.clue_#{game}_#{category}_#{question}.correct_response', id='clue_#{game}_#{category}_#{question}.correct_response')
+                        input.form-control(type='text', placeholder='Image Link', ng-model='game.clue_#{game}_#{category}_#{question}.media', id='clue_#{game}_#{category}_#{question}.media' )
+                else 
+                    if (category == 1)
+                            h3 Category
+                                input.form-control(type='text', placeholder='Category Name', ng-model='game.category_#{game}_#{category}.category_name', id='clue_#{game}_#{category}.category_name')
+                                input.form-control(type='text', placeholder='Category Comments', ng-model='game.category_#{game}_#{category}.category_comments', id='clue_#{game}_#{category}.category_comments')
+                            h5 Clue
+                            input.form-control(type='text', placeholder='Clue', ng-model='game.clue_#{game}.clue_text', id='clue_#{game}.clue_text' )
+                            input.form-control(type='text', placeholder='Response', ng-model='game.clue_#{game}.correct_response', id='clue_#{game}.correct_response' )
+                            input.form-control(type='text', placeholder='Image Link', ng-model='game.clue_#{game}.media', id='clue_#{game}.media' )

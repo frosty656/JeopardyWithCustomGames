@@ -5,9 +5,6 @@ angular.module('myApp.controllers').
     socket.emit('board:init');
 
     socket.on('board:init', function (data) {
-      // log th data as json
-      console.log('board:init ');
-      console.log(JSON.stringify(data));
       if (data) {
         $scope.data = data.data;
         $scope.game = data.game;
@@ -42,8 +39,6 @@ angular.module('myApp.controllers').
     }
 
     socket.on('round:start', function (data) {
-      console.log('round:start');
-      console.log(JSON.stringify(data));
       if (modalInstance) {
         modalInstance.close();
       }
@@ -89,14 +84,10 @@ angular.module('myApp.controllers').
     };
 
     socket.on('clue:start', function (data) {
-      console.log('clue:start');
-      console.log(JSON.stringify(data));
       openModal(data);
     });
 
     socket.on('clue:end', function (data) {
-      console.log('clue:end');
-      console.log(JSON.stringify(data));
       $scope.game = data;
       if (modalInstance) {
         modalInstance.close();

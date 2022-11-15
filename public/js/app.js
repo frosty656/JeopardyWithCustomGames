@@ -58,5 +58,10 @@ config(function ($stateProvider, $urlRouterProvider) {
       url: '/button',
       templateUrl: 'partials/button',
       controller: 'ButtonCtrl'
+    }).
+    state('editor', {
+      url: '/editor',
+      templateUrl: 'partials/editor',
+      controller: 'EditorCtrl'
     });
 });

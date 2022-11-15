@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies
  */
@@ -41,7 +40,6 @@ if (app.get('env') === 'production') {
  // TODO
 };
 
-
 /**
 * Routes
 */
@@ -54,16 +52,10 @@ app.get('/partials/:name', routes.partials);
 app.get('/api/seasons', api.seasons);
 app.get('/api/seasons/:id', api.season);
 app.get('/api/games/:id', api.game);
+app.post('/api/saveCustomGame', api.saveCustomGame);
 
 // J-Archive proxy
 app.get('/media/*', require('./routes/proxy'));
-
-// // redirect all others to the index (HTML5 history)
-// app.get('/button', (req, res) => {
-//   res.sendFile(__dirname + '/views/button.html');
-// });
-
-
 
 // Socket.io Communication
 io.sockets.on('connection', require('./routes/socket')(io));

@@ -8,49 +8,34 @@ angular.module('myApp.controllers').
     socket.emit('game:init', $scope.data.id);
 
     socket.on('game:init', function (data) {
-      console.log('game:init ' + !!data);
       if (data) {
         $scope.game = data.game;
       }
     })
 
     socket.on('round:start', function (data) {
-      console.log('round:start');
       $scope.game = data.game;
     });
 
     socket.on('team:new', function (data) {
-      var open_team = false;
-      console.log($scope.game);
-
       [1, 2, 3].forEach(function (num) {
-        if(open_team) return;
         var key = 'player_' + num
         if($scope.game[key] === undefined || $scope.game[key].name === undefined|| $scope.game[key].name === '') {
           var name = data;
           $scope.game[key] = { name };
-          console.log("Team " + num + " is now " + data);
-          open_team = true;
+          return
         }
       })
-
-      if(!open_team){
-        console.log("No open teams for team ", data);
-      }
     })
 
     $scope.startGame = function () {
-      console.log('game:start emit');
       socket.emit('game:start', {
         data: $scope.data,
         game: $scope.game
-      }, function (result) {
-        console.log('callback');
-      });
+      }, null);
     };
 
     $scope.startClue = function (id) {
-      console.log('clue:start emit ' + id);
       socket.emit('clue:start', id);
       var modalInstance = $modal.open({
         templateUrl: 'partials/gameclue',
@@ -98,14 +83,11 @@ angular.module('myApp.controllers').
             $scope.game[key].score -= value;
           }
         });
-
-        console.log('clue:end emit');
         socket.emit('clue:end', $scope.game);
       });
     };
 
     $scope.endRound = function () {
-      console.log('round:end emit');
       socket.emit('round:end', $scope.game);
     };
 

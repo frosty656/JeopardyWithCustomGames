@@ -28,16 +28,11 @@ angular.module('myApp.controllers').
     $scope.submit = function () {
       $scope.has_team_name = true;
       socket.emit("team:new", $scope.teamName);
-      console.log('Sending team:new ' + $scope.teamName)
     };
 
     $scope.press = function () {
       if($scope.can_buzz){
-        console.log('Sending buzzer:press ' + $scope.teamName);
-
         socket.emit('buzzer:press', $scope.teamName);
-      } else {
-        console.log("Buzzing disabled");
       }
     };
   });

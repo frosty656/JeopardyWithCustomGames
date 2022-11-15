@@ -124,7 +124,6 @@ function exportRound($, context, r) {
       id: link ? link.substring(link.indexOf("=") + 1, link.length) : undefined,
       daily_double: daily_double ? true : undefined,
       triple_stumper: _.contains(answerHtml, "Triple Stumper") || undefined,
-      clue_html: data.html(),
       clue_text: data.text(),
       correct_response: cheerio.load(answerHtml)(".correct_response").text(),
       media: $("a", data).length
@@ -177,16 +176,10 @@ exports.season = function (req, res, next) {
 };
 
 exports.game = function (req, res, next) {
-  // If the name of the game is in the customGames folder then return the file
-  console.log("Requested game: " + req.params.id);
-
-
   // Make a list of all files in the customGames folder
   var customGames = fs.readdirSync('public/customGames/');
   // Log the list of games as json
-  console.log("Custom games: " + JSON.stringify(customGames));
   if (customGames.includes(req.params.id)) {
-    console.log("Custom game requested");
     fs.readFile("public/customGames/" + req.params.id, function (err, data) {
       if (err) {
         next(err);
@@ -195,7 +188,6 @@ exports.game = function (req, res, next) {
       }
     });
   } else {
-    console.log("Regular game requested");
     request(
       "http://www.j-archive.com/showgame.php?game_id=" + req.params.id,
       function (error, response, html) {
@@ -240,3 +232,24 @@ exports.game = function (req, res, next) {
     );
   }
 };
+
+exports.saveCustomGame = function (req, res, next) {
+  var game = req.body;
+
+  if(!game.game_title) {
+    res.status(400).send("Game name is required");
+
+  } else {
+    fs.writeFile(
+      "public/customGames/" + game.game_title + ".json",
+      JSON.stringify(game, null, indent=4),
+      function (err) {
+        if (err) {
+          next(err);
+        } else {
+          res.json(game);
+        }
+      }
+    );
+  }
+}

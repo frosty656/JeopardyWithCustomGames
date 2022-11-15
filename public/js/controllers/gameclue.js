@@ -20,15 +20,11 @@ angular.module('myApp.controllers').
     
     socket.on('buzzer:press', function (data) {
       if($scope.allow_buzz){
-        console.log('buzzer:press callback' + data);
         if (data) {
-          console.log("Setting active team to " + data);
           $scope.active_team = data;
           $scope.allow_buzz = false;
           socket.emit("buzzer:off", data);
         }
-      } else {
-        console.log("Buzzing disabled");
       }
     })
 
@@ -57,10 +53,8 @@ angular.module('myApp.controllers').
           $scope.result.player_2.right = undefined;
         }
         socket.emit('buzzer:off', response.id);
-        console.log(team_name + " got it right!");
       } else {
         socket.emit("buzzer:wrong", team_name);
-        console.log(team_name + " got it wrong!");
       }
       $scope.active_team = '.'
       if(correct){
@@ -74,12 +68,10 @@ angular.module('myApp.controllers').
     $scope.setDDValue = function () {
       $scope.result.value = parseInt($scope.result.dd_value);
       $scope.result.dd_confirm = true;
-      console.log('clue:daily emit');
       socket.emit('clue:daily', response.id);
     };
 
     $scope.setDDResult = function (correct) {
-      console.log('setDDResult ' + correct);
       $scope.result.dd_result = correct;
     };
 

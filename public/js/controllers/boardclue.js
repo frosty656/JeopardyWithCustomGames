@@ -8,7 +8,6 @@ angular.module('myApp.controllers').
       response.clue.daily_double ? 'daily' : 'clue';
 
     socket.on('clue:daily', function (data) {
-      console.log('clue:daily ' + data);
       $scope.show = 'clue';
     });
   });

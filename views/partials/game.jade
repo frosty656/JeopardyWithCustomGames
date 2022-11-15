@@ -1,5 +1,5 @@
 nav.navbar.navbar-default.navbar-fixed-top
-  .container
+
     .navbar-header
       span.navbar-brand
         span(ng-show='game.round == "DJ"') Double
@@ -12,9 +12,18 @@ nav.navbar.navbar-default.navbar-fixed-top
             .input-group
               .input-group-addon(ng-show='game.control_player == "player_#{i}"')
                 span.glyphicon.glyphicon-map-marker
-              input.form-control(type='text', placeholder='Player #{i}', ng-model='game.player_#{i}.name')
-              .input-group-addon {{game.player_#{i}.score || 0 | currency:'$':0}}
-      ul.nav.navbar-nav.navbar-right
+              div
+                input.form-control(type='text', placeholder='Player #{i}', ng-model='game.player_#{i}.name' )
+                
+                input.form-control(type='text', placeholder='$0', ng-model='game.player_#{i}.score' style='width:70px; background-color:Gainsboro')
+
+              //- input.form-control(type='text', placeholder='Player #{i}', ng-model='game.player_#{i}.name' )
+              //- .input-group-addon {{game.player_#{i}.score || 0 | currency:'$':0}}
+
+              //- input.form-control(type='text', placeholder='$0', ng-model='game.player_#{i}.score', style='width:20%')
+
+
+      ul.nav.navbar-nav.navbar-right(style='padding-right:50px')
         li
           button.btn.btn-primary.navbar-btn(type='button', ng-click='startGame()', ng-show='!game.round') Start Game
           button.btn.btn-primary.navbar-btn(type='button', ng-click='endRound()', ng-show='game.round == "J" || game.round == "DJ" || game.round == "FJ"') End Round
@@ -24,7 +33,7 @@ nav.navbar.navbar-default.navbar-fixed-top
   br
   br
   br
-
+  br
   div(ng-hide='game.round')
     .alert.alert-warning(ng-hide='data.game_complete')
       strong Warning!
