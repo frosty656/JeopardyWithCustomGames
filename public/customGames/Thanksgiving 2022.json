@@ -1,0 +1,148 @@
+{
+    "game_title": "Thanksgiving 2022",
+    "game_comments": "Game for thanksgiving 2022",
+    "category_J_1": {
+        "category_name": "Turkeys"
+    },
+    "clue_J_1_1": {
+        "clue_text": "This is the sound a turkey makes",
+        "correct_response": "What is gobble gobble?"
+    },
+    "clue_J_1_2": {
+        "clue_text": "Female turkeys are called hens. This is what male turkeys are called.",
+        "correct_response": "What are toms?"
+    },
+    "clue_J_1_3": {
+        "clue_text": "People from this Western State are the largest consumers of turkey in the United States.",
+        "correct_response": "What is California?"
+    },
+    "clue_J_1_4": {
+        "clue_text": "This is the name of the skin that hangs from a turkey's neck.",
+        "correct_response": "What is the wattle?"
+    },
+    "clue_J_1_5": {
+        "clue_text": "This nearby State produces the most turkeys each year.",
+        "correct_response": "What is Minnesota?"
+    },
+    "category_J_2": {
+        "category_name": "History"
+    },
+    "clue_J_2_1": {
+        "clue_text": "This is the name of the ship on which the pilgrims came to America.",
+        "correct_response": "What is the Mayflower?"
+    },
+    "clue_J_2_2": {
+        "clue_text": "The pilgrims landed at this rock.",
+        "correct_response": "What is Plymouth Rock?"
+    },
+    "clue_J_2_3": {
+        "clue_text": "This tribe of Native Americans were invited to the first Thanksgiving feast.",
+        "correct_response": "What are the Wampanoag?"
+    },
+    "clue_J_2_4": {
+        "clue_text": "The first Thanksgiving lasted this many days.",
+        "correct_response": "What is 3?"
+    },
+    "clue_J_2_5": {
+        "clue_text": "The Mayflower held approximately this many pilgrims",
+        "correct_response": "What is 100?"
+    },
+    "category_J_3": {
+        "category_name": "The Big Meal"
+    },
+    "clue_J_3_1": {
+        "clue_text": "Americans eat approximately 535 million pounds of this on Thanksgiving",
+        "correct_response": "What is Turkey?"
+    },
+    "clue_J_3_2": {
+        "clue_text": "What are the two most popular pies baked at Thanksgiving?",
+        "correct_response": "What are pumpkin and apple?"
+    },
+    "clue_J_3_3": {
+        "clue_text": "Many Southern Americans serve this cheesy side dish with their Thanksgiving meal.",
+        "correct_response": "What is macaroni & cheese?"
+    },
+    "clue_J_3_4": {
+        "clue_text": "Approximately 94% of American Thanksgiving meals include this tangy item.",
+        "correct_response": "What is cranberry sauce?"
+    },
+    "clue_J_3_5": {
+        "clue_text": "Approximately this percentage of American Thanksgiving meals include turkey (percentage should be in 10s).",
+        "correct_response": "What is 90%?"
+    },
+    "category_J_4": {
+        "category_name": "Macy's Parade"
+    },
+    "clue_J_4_1": {
+        "clue_text": "The parade is held every year in this city.",
+        "correct_response": "What is New York CIty?"
+    },
+    "clue_J_4_2": {
+        "clue_text": "A float featuring this jolly fellow ends the parade every year",
+        "correct_response": "Who is Santa?"
+    },
+    "clue_J_4_3": {
+        "clue_text": "A giant balloon version of this cartoon dog has appeared in the parade more times than any other character (6 times).",
+        "correct_response": "Who is Snoopy?"
+    },
+    "clue_J_4_4": {
+        "clue_text": "If you tune into this year's parade, you will see balloon characters from this book series, one of the most popular in our library.",
+        "correct_response": "What is Diary of a Wimpy Kid?"
+    },
+    "clue_J_4_5": {
+        "clue_text": "The Macy's Thanksgiving Day parade began in this decade.",
+        "correct_response": "What is the 1920s? (1924 to be exact)."
+    },
+    "category_J_5": {
+        "category_name": "Miscellaneous"
+    },
+    "clue_J_5_1": {
+        "clue_text": "The day after Thanksgiving, often referred to as the biggest shopping day of the year, is nicknamed this.",
+        "correct_response": "What is Black Friday?"
+    },
+    "clue_J_5_2": {
+        "clue_text": "These two football teams play on Thanksgiving Day every year.",
+        "correct_response": "Who are the Detroit Lions and the Dallas Cowboys?"
+    },
+    "clue_J_5_3": {
+        "clue_text": "This \"honest\" president is the one who officially declared Thanksgiving a national holiday.",
+        "correct_response": "Who is Abraham Lincoln?"
+    },
+    "clue_J_5_4": {
+        "clue_text": "This is what the word \"cornucopia\" means.",
+        "correct_response": "What is \"horn of plenty?\""
+    },
+    "clue_J_5_5": {
+        "clue_text": "In Canada, Thanksgiving is celebrated during this month.",
+        "correct_response": "What is October?"
+    },
+    "category_J_6": {
+        "category_name": "Activities and Gatherings"
+    },
+    "clue_J_6_1": {
+        "clue_text": "This is celebrated every year on the last day of October",
+        "correct_response": "What is Halloween?"
+    },
+    "clue_J_6_2": {
+        "clue_text": "This is celebrated on the 4th Thursday of November",
+        "correct_response": "What is Thanksgiving?"
+    },
+    "clue_J_6_3": {
+        "clue_text": "This event is held in Munich Germany every year",
+        "correct_response": "What is OctoberFest?"
+    },
+    "clue_J_6_4": {
+        "clue_text": "This activity you typically leave with a basket of fruit that the activity shares a name with",
+        "correct_response": "What is apple picking?"
+    },
+    "clue_J_6_5": {
+        "clue_text": "Typically done before Halloween people do this activity that involves hollowing out a gourd / squash"
+    },
+    "category_FJ_1": {
+        "category_name": "The First Thanksgiving"
+    },
+    "clue_FJ": {
+        "clue_text": "This Native American acted as an interpreter for the new settlers",
+        "correct_response": "Who is Squanto?"
+    }
+}
