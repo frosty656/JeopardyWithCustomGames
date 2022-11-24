@@ -18,13 +18,14 @@ angular.module('myApp.controllers').
     });
 
     socket.on('team:new', function (data) {
-      [1, 2, 3].forEach(function (num) {
+      [1, 2, 3].every(function (num) {
         var key = 'player_' + num
         if($scope.game[key] === undefined || $scope.game[key].name === undefined|| $scope.game[key].name === '') {
           var name = data;
           $scope.game[key] = { name };
-          return
+          return false
         }
+        return true
       })
     })
 
