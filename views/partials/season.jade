@@ -5,8 +5,11 @@
       th Name
       th Description
       th Note
+      th(ng-show='id == "Custom Games"') Edit
     tr(ng-repeat='episode in data')
       td
         a(ui-sref='game({ id: episode.id })') {{ episode.name }}
       td {{episode.description}}
       td {{episode.note}}
+      td(ng-show='id == "Custom Games"')
+        a(href="/#/editor/{{episode.name}}") Edit Game
