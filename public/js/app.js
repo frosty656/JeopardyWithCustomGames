@@ -60,8 +60,14 @@ config(function ($stateProvider, $urlRouterProvider) {
       controller: 'ButtonCtrl'
     }).
     state('editor', {
-      url: '/editor',
+      url: '/editor/:id',
       templateUrl: 'partials/editor',
-      controller: 'EditorCtrl'
-    });
+      controller: 'EditorCtrl',
+      resolve: {
+        response: function ($http, $stateParams) {
+          return $http.get('/api/games/' + $stateParams.id);
+        }
+      }
+    })
+    ;
 });

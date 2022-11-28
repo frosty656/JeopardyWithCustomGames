@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('myApp.controllers').
-  controller('EditorCtrl', function ($scope, socket) {
+  controller('EditorCtrl', function ($scope, socket, response) {
+    $scope.game = response.data;
     $scope.save = function () {
         // Get the value of id game_title
         var game_title = document.getElementById('game_title').value;
