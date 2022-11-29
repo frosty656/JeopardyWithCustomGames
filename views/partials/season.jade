@@ -3,13 +3,17 @@
   table.table.table-striped.table-hover.table-bordered
     tr
       th Name
-      th Description
-      th Note
+      th(ng-show='id != "Custom Games"') Description
+      th(ng-show='id != "Custom Games"') Note
       th(ng-show='id == "Custom Games"') Edit
     tr(ng-repeat='episode in data')
       td
         a(ui-sref='game({ id: episode.id })') {{ episode.name }}
-      td {{episode.description}}
-      td {{episode.note}}
+      td(ng-show='id != "Custom Games"') {{episode.description}}
+      td(ng-show='id != "Custom Games"') {{episode.note}}
       td(ng-show='id == "Custom Games"')
         a(href="/#/editor/{{episode.name}}") Edit Game
+    tr(ng-show='id == "Custom Games"')
+      td.row.text-center(colspan="4")
+        input.form-control(id="NewGameName" placeholder="Name of Game" width: 75%  ng-model='newGameName')
+        a(class="btn btn-primary mb-3", href="/#/editor/{{newGameName}}") Create New Game
