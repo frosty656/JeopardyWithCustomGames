@@ -235,7 +235,6 @@ exports.game = function (req, res, next) {
 
 exports.saveCustomGame = function (req, res, next) {
   var game = req.body;
-
   if(!game.game_title) {
     res.status(400).send("Game name is required");
 
@@ -251,5 +250,20 @@ exports.saveCustomGame = function (req, res, next) {
         }
       }
     );
+  }
+}
+
+exports.deleteGame = function (req, res, next) {
+  var game = req.body;
+  if(!game.Id) {
+    res.status(400).send("Game Id is required");
+  } else {
+    fs.unlink("public/customGames/" + game.Id, function (err) {
+      if (err) {
+        next(err);
+      } else {
+        res.json({ success: true });
+      }
+    });
   }
 }

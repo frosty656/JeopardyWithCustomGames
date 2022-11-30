@@ -6,6 +6,7 @@
       th(ng-show='id != "Custom Games"') Description
       th(ng-show='id != "Custom Games"') Note
       th(ng-show='id == "Custom Games"') Edit
+      th(ng-show='id == "Custom Games"') Delete
     tr(ng-repeat='episode in data')
       td
         a(ui-sref='game({ id: episode.id })') {{ episode.name }}
@@ -13,7 +14,8 @@
       td(ng-show='id != "Custom Games"') {{episode.note}}
       td(ng-show='id == "Custom Games"')
         a(href="/#/editor/{{episode.name}}") Edit Game
+      td(ng-show='id == "Custom Games"')
+        button(ng-click='deleteGame(episode.name)') Delete Game
     tr(ng-show='id == "Custom Games"')
       td.row.text-center(colspan="4")
-        input.form-control(id="NewGameName" placeholder="Name of Game" width: 75%  ng-model='newGameName')
-        a(class="btn btn-primary mb-3", href="/#/editor/{{newGameName}}") Create New Game
+        a(class="btn btn-primary mb-3", href="/#/editor/" + Date.now()) Create New Game

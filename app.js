@@ -53,6 +53,8 @@ app.get('/api/seasons', api.seasons);
 app.get('/api/seasons/:id', api.season);
 app.get('/api/games/:id', api.game);
 app.post('/api/saveCustomGame', api.saveCustomGame);
+app.post('/api/deleteGame', api.deleteGame);
+
 
 // J-Archive proxy
 app.get('/media/*', require('./routes/proxy'));
