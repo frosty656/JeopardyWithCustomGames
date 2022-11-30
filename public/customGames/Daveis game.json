@@ -1,0 +1,27 @@
+{
+    "id": "1669814868859",
+    "game_title": "Daveis game",
+    "game_comments": "",
+    "game_complete": false,
+    "category_J_2": {
+        "category_name": "soimething"
+    },
+    "category_J_1": {
+        "category_name": "The Office"
+    },
+    "clue_J_1_1": {
+        "clue_text": "ONe"
+    },
+    "clue_J_1_2": {
+        "clue_text": "two"
+    },
+    "clue_J_1_3": {
+        "clue_text": "three"
+    },
+    "clue_J_1_4": {
+        "clue_text": "four"
+    },
+    "clue_J_1_5": {
+        "clue_text": "five"
+    }
+}
