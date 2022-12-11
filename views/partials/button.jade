@@ -1,17 +1,41 @@
 
-div(ng-show="!has_team_name")
+div(ng-show="step = 1")
     input.form-control(type='text', placeholder='Team name', ng-model='teamName' style="width: 100vw; height: 10vh; font-size: 50px;")
     button.btn.btn-lg.btn-success(
         type="button", 
-        ng-click='submit()'
+        ng-click='submitTeamName()'
         style="width: 100vw; height: 90vh; font-size: 50px;"
     ) Submit
-div(ng-show="has_team_name")
+div(ng-show="step != 1")
     div.text-center(style="width: 100vw; height: 10vh; font-size: 50px;")
-        p {{teamName}}
+    p {{teamName}}
+div(ng-show="step = 2")
     button.btn.btn-lg.btn-success(
         type="button", 
         ng-click="press()" 
         ng-style="{'background-color':can_buzz ? 'green' : 'red' }"
         style="width: 100vw; height: 90vh; font-size: 100px;"
     ) PRESS
+div(ng-show="step = 3")
+    input.form-control(type='text', placeholder='Team name', ng-model='teamName' style="width: 100vw; height: 10vh; font-size: 50px;")
+        button.btn.btn-lg.btn-success(
+        type="button", 
+        ng-click='submitFinalBid()'
+        style="width: 100vw; height: 90vh; font-size: 50px;"
+    ) Submit
+
+div(ng-show="step = 4")
+    input.form-control(type='text', placeholder='Team name', ng-model='finalAnswer' style="width: 100vw; height: 10vh; font-size: 50px;")
+    button.btn.btn-lg.btn-success(
+        type="button", 
+        ng-click='submitFinalAnswer()'
+        style="width: 100vw; height: 90vh; font-size: 50px;"
+    ) Submit
+div(ng-show="step = 5")
+    // Waiting message
+    div.text-center(style="width: 100vw; height: 90vh; font-size: 50px;")
+    p Waiting for other teams to answer...
+div(ng-show="step = 6")
+    // Announce the winning team
+    div.text-center(style="width: 100vw; height: 90vh; font-size: 50px;")
+    p {{winner.name}} won with a score of {{winner.score}}!

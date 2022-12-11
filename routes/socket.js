@@ -63,6 +63,10 @@ module.exports = function (io) {
       socket.broadcast.emit('clue:end', data);
     });
 
+    socket.on('buzzer:new', function (data) {
+      socket.broadcast.emit('team:new', data);
+    });
+
     socket.on('buzzer:press', function (data) {
       socket.broadcast.emit('buzzer:press', data);
     });
@@ -70,17 +74,34 @@ module.exports = function (io) {
     socket.on('buzzer:on', function (data) {
       socket.broadcast.emit('buzzer:on', data);
     });
+
     socket.on('buzzer:wrong', function (data) {
       // ToDo: Send the name of the team that got it wrong
       socket.broadcast.emit('buzzer:wrong', data);
     });
+
     socket.on('buzzer:off', function (data) {
 
       socket.broadcast.emit('buzzer:off', data);
     });
-    socket.on('team:new', function (data) {
 
-      socket.broadcast.emit('team:new', data);
+    socket.on('buzzer:finalJeopardy', function (data) {
+
+      socket.broadcast.emit('buzzer:finalJeopardy', data);
+    });
+
+    socket.on('buzzer:bid', function (data) {
+
+      socket.broadcast.emit('team:bid', data);
+    });
+
+    socket.on('buzzer:answer', function (data) {
+
+      socket.broadcast.emit('team:answer', data);
+    });
+
+    socket.on('buzzer:winner', function (data) {
+      socket.broadcast.emit('team:winner', data);
     });
   };
 };
