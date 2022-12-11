@@ -6,19 +6,25 @@ var request = require("request");
 var cheerio = require("cheerio");
 var _ = require("lodash");
 const fs = require("fs");
+const http = require('https');
+
+function AddCustomGameSeason(listToAddTo){
+  // Add the custom game season to the beginning of the list
+  listToAddTo.unshift({
+    id: "Custom Games",
+    name: "Custom Games",
+    description: "Custom Games",
+    note: "Custom Games",
+  });
+}
 
 function ExportSeasonListIndex(req, res, next) {
   return function (error, response, html) {
     if (!error) {
       var $ = cheerio.load(html),
-        result = [];
+      result = [];
 
-      result.push({
-        id: "Custom Games",
-        name: "Custom Games",
-        description: "Custom Games",
-        note: "Custom Games",
-      });
+      AddCustomGameSeason(result);
 
       $("#content table tr").each(function () {
         var data = $(this),
@@ -142,10 +148,31 @@ function exportRound($, context, r) {
 }
 
 exports.seasons = function (req, res, next) {
-  request(
-    "http://www.j-archive.com/listseasons.php",
-    ExportSeasonListIndex(req, res, next)
+  const url = 'https://www.j-archive.com';
+
+  // Check if website is online before trying to scrape it
+  // Else just return the custom games season
+  http.get(url, (response) => {
+    if (response.statusCode === 200) {
+      request(
+        "http://www.j-archive.com/listseasons.php",
+        ExportSeasonListIndex(req, res, next)
+      );
+    } else {
+      // The website is not reachable.
+      result = [];
+      AddCustomGameSeason(result);
+      res.json(result);
+    }
+  }).on('error', (error) => {
+    // The website is not reachable.
+    result = [];
+    AddCustomGameSeason(result);
+    res.json(result);
+  }
   );
+
+
 };
 
 exports.season = function (req, res, next) {
