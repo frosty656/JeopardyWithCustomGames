@@ -30,11 +30,12 @@ module.exports = function (io) {
       }
       else if (data.round === 'DJ') {
         data.round = 'FJ';
+        socket.broadcast.emit('buzzer:finalJeopardy', data);
         data.control_player = undefined;
       }
       else if (data.round === 'FJ') {
         data.round = 'end';
-
+        socket.broadcast.emit('team:winner', data);
         var file = 'games/' + id + '-' + new Date().getTime() + '.json';
         jsonfile.writeFileSync(file, data, { spaces: 2 });
       }
@@ -85,11 +86,6 @@ module.exports = function (io) {
       socket.broadcast.emit('buzzer:off', data);
     });
 
-    socket.on('buzzer:finalJeopardy', function (data) {
-
-      socket.broadcast.emit('buzzer:finalJeopardy', data);
-    });
-
     socket.on('buzzer:bid', function (data) {
 
       socket.broadcast.emit('team:bid', data);
@@ -98,10 +94,6 @@ module.exports = function (io) {
     socket.on('buzzer:answer', function (data) {
 
       socket.broadcast.emit('team:answer', data);
-    });
-
-    socket.on('buzzer:winner', function (data) {
-      socket.broadcast.emit('team:winner', data);
     });
   };
 };

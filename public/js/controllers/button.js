@@ -5,12 +5,14 @@ angular.module('myApp.controllers').
     $scope.has_team_name = false;
     $scope.can_buzz = false;
     $scope.step = 1;
+    console.log("Step 1")
 
     // Step one, get and submit team name
     $scope.submitTeamName = function () {
       $scope.has_team_name = true;
       socket.emit("buzzer:new", $scope.teamName);
       $scope.step = 2;
+      console.log("Step 2")
     };
 
     // Step two allow team to buzz in when they should
@@ -43,12 +45,14 @@ angular.module('myApp.controllers').
     // Wait until final jeopardy for step three
     socket.on('buzzer:finalJeopardy', function (data) {
       $scope.step = 3;
+      console.log("Step 3")
     })
     // Step three get and submit final bid
     $scope.submitFinalBid = function () {
       $scope.has_team_name = true;
       socket.emit("buzzer:bid", { teamName: $scope.teamName, bid: $scope.bid });
       $scope.step = 4;
+      console.log("Step 4")
     };
 
     // Step four get and submit final answer
@@ -57,6 +61,7 @@ angular.module('myApp.controllers').
       socket.emit("buzzer:answer", { teamName: $scope.teamName, answer: $scope.answer });
 
       $scope.step = 5;
+      console.log("Step 5")
     };
 
     // Step five, wait for all answers to come in
@@ -66,5 +71,6 @@ angular.module('myApp.controllers').
       $scope.winner.name = data.name;
       $scope.winner.score = data.score;
       $scope.step = 6;
+      console.log("Step 6")
     })
   });
