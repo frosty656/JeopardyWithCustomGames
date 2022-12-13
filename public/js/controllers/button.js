@@ -50,7 +50,7 @@ angular.module('myApp.controllers').
     // Step three get and submit final bid
     $scope.submitFinalBid = function () {
       $scope.has_team_name = true;
-      socket.emit("buzzer:bid", { teamName: $scope.teamName, bid: $scope.bid });
+      socket.emit("buzzer:bid", { teamName: $scope.teamName, bid: parseInt($scope.bid) });
       $scope.step = 4;
       console.log("Step 4")
     };

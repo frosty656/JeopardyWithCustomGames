@@ -92,6 +92,17 @@ angular.module('myApp.controllers').
       socket.emit('round:end', $scope.game);
     };
 
+    socket.on('buzzer:bid', function (data) {
+      if (data) {
+        [1,2,3].forEach(function (i) {
+          var key = 'player_' + i;
+          if(data.teamName == $scope.game[key].name) {
+            $scope.game[key].fj_wager = data.bid;
+          }
+        })
+      }
+    })
+
     $scope.toggleComments = function (category) {
       $scope.hideComments[category] = !$scope.hideComments[category];
     }

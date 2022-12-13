@@ -16,7 +16,7 @@ div(ng-show="step == 2")
         style="width: 100vw; height: 90vh; font-size: 100px;"
     ) PRESS
 div(ng-show="step == 3")
-    input.form-control(type='text', placeholder='Bid', ng-model='teamBid' style="width: 100vw; height: 10vh; font-size: 50px;")
+    input.form-control(type='number', placeholder='Bid', ng-model='bid' style="width: 100vw; height: 10vh; font-size: 50px;")
     button.btn.btn-lg.btn-success(
         type="button", 
         ng-click='submitFinalBid()'

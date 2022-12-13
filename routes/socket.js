@@ -87,13 +87,13 @@ module.exports = function (io) {
     });
 
     socket.on('buzzer:bid', function (data) {
-
-      socket.broadcast.emit('team:bid', data);
+      console.log('SOCKET buzzer:bid', data);
+      socket.broadcast.emit('buzzer:bid', data);
     });
 
     socket.on('buzzer:answer', function (data) {
 
-      socket.broadcast.emit('team:answer', data);
+      socket.broadcast.emit('buzzer:answer', data);
     });
   };
 };
