@@ -6,6 +6,8 @@
 .modal-body
   h1.text-center(ng-hide="clue.daily_double && !result.dd_confirm" ng-bind-html='clue.clue_html')
   h2.text-center(ng-hide="clue.daily_double && !result.dd_confirm")
+    em {{ clue.clue_text }}
+  h2.text-center(ng-hide="clue.daily_double && !result.dd_confirm")
     em {{ clue.correct_response }}
 
   h1.text-center(ng-show="clue.daily_double && !result.dd_confirm") Daily Double!
@@ -45,4 +47,6 @@
 
 .modal-footer
   button.btn.btn-lg.btn-warning(type="button", ng-click="cancel()") Cancel
-  button.btn.btn-lg.btn-success(type="button", ng-click="ok()") Submit
+  button.btn.btn-lg.btn-success(type="button", ng-show="finished_reading", ng-click="ok()") Submit
+  button.btn.btn-lg.btn-success(type="button", ng-show="!finished_reading", ng-click="allowBuzz()") Allow Buzz
+

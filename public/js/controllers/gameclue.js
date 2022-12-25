@@ -2,8 +2,9 @@
 
 angular.module('myApp.controllers').
   controller('GameClueCtrl', function ($scope, $modalInstance, response, socket) {
-    socket.emit('buzzer:on');
+    console.log(response)
     $scope.category = response.category;
+    $scope.clue_text = response.clue_text;
     $scope.clue = response.clue;
     $scope.game = response.game;
     $scope.result = {
@@ -13,7 +14,9 @@ angular.module('myApp.controllers').
       dd_player: response.game.control_player
     };
     $scope.active_team = '.'
-    $scope.allow_buzz = true;
+    $scope.allow_buzz = false;
+    $scope.finished_reading = false;
+
 
     var value = response.id.split('_');
     $scope.result.value = $scope.result.dd_value = parseInt(value[3]) * (value[1] === 'J' ? 200 : 400);
@@ -39,6 +42,12 @@ angular.module('myApp.controllers').
       })
 
     }) 
+
+    $scope.allowBuzz = function () {
+      socket.emit('buzzer:on');
+      $scope.allow_buzz = true;
+      $scope.finished_reading = true;
+    }
 
     $scope.setResult = function (num, correct) {
       var key = 'player_' + num;
