@@ -6,7 +6,7 @@
   height: 100%;
   background: #0015a0;
   color: #ffffff;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: FjallaOne-Regular;
   text-shadow: 4px 4px #000000;
 }
 
@@ -66,7 +66,7 @@
 .board-modal-open .modal-content {
   background: #0015a0;
   color: #ffffff;
-  font-family: 'Korinna', 'Kadwa', serif;
+  font-family: Kadwa-Bold;
   font-size: 400%;
   font-weight: 600;
   text-shadow: 4px 4px #000000;
@@ -98,12 +98,12 @@
 }
 
 .player-name {
-  font-family: 'Korinna', 'Kadwa', serif;
+  font-family: Kadwa-Bold;
   text-transform: uppercase;
 }
 
 .player-score {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: FjallaOne-Regular;
 }
 
 .video-wrapper {

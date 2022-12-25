@@ -6,6 +6,8 @@
 .modal-body
   h1.text-center(ng-hide="clue.daily_double && !result.dd_confirm" ng-bind-html='clue.clue_html')
   h2.text-center(ng-hide="clue.daily_double && !result.dd_confirm")
+    em {{ clue.clue_text }}
+  h2.text-center(ng-hide="clue.daily_double && !result.dd_confirm")
     em {{ clue.correct_response }}
 
   h1.text-center(ng-show="clue.daily_double && !result.dd_confirm") Daily Double!
@@ -19,6 +21,7 @@
     each i in [1, 2, 3]
       .col-md-4.text-center
         h4(ng-style="{'background-color':active_team == game.player_#{i}.name ? 'green' : '' }") {{ game.player_#{i}.name || 'Player #{i}' }}
+        h4 {{game.player_#{i}.FJAnswer}}
         .btn-group
           button.btn.btn-lg(ng-click='setResult(#{i}, false)', ng-class="{'btn-default':!result.player_#{i}.wrong, 'btn-danger':result.player_#{i}.wrong}")
             span.glyphicon.glyphicon-remove
@@ -44,4 +47,6 @@
 
 .modal-footer
   button.btn.btn-lg.btn-warning(type="button", ng-click="cancel()") Cancel
-  button.btn.btn-lg.btn-success(type="button", ng-click="ok()") Submit
+  button.btn.btn-lg.btn-success(type="button", ng-show="finished_reading", ng-click="ok()") Submit
+  button.btn.btn-lg.btn-success(type="button", ng-show="!finished_reading", ng-click="allowBuzz()") Allow Buzz
+

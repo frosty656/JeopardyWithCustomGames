@@ -30,11 +30,12 @@ module.exports = function (io) {
       }
       else if (data.round === 'DJ') {
         data.round = 'FJ';
+        socket.broadcast.emit('buzzer:finalJeopardy', data);
         data.control_player = undefined;
       }
       else if (data.round === 'FJ') {
         data.round = 'end';
-
+        socket.broadcast.emit('team:winner', data);
         var file = 'games/' + id + '-' + new Date().getTime() + '.json';
         jsonfile.writeFileSync(file, data, { spaces: 2 });
       }
@@ -63,6 +64,10 @@ module.exports = function (io) {
       socket.broadcast.emit('clue:end', data);
     });
 
+    socket.on('buzzer:new', function (data) {
+      socket.broadcast.emit('team:new', data);
+    });
+
     socket.on('buzzer:press', function (data) {
       socket.broadcast.emit('buzzer:press', data);
     });
@@ -70,17 +75,25 @@ module.exports = function (io) {
     socket.on('buzzer:on', function (data) {
       socket.broadcast.emit('buzzer:on', data);
     });
+
     socket.on('buzzer:wrong', function (data) {
       // ToDo: Send the name of the team that got it wrong
       socket.broadcast.emit('buzzer:wrong', data);
     });
+
     socket.on('buzzer:off', function (data) {
 
       socket.broadcast.emit('buzzer:off', data);
     });
-    socket.on('team:new', function (data) {
 
-      socket.broadcast.emit('team:new', data);
+    socket.on('buzzer:bid', function (data) {
+      console.log('SOCKET buzzer:bid', data);
+      socket.broadcast.emit('buzzer:bid', data);
+    });
+
+    socket.on('buzzer:answer', function (data) {
+      console.log('SOCKET buzzer:answer', data);
+      socket.broadcast.emit('buzzer:answer', data);
     });
   };
 };
