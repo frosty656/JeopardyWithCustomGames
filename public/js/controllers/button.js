@@ -58,7 +58,7 @@ angular.module('myApp.controllers').
     // Step four get and submit final answer
     $scope.submitFinalAnswer = function () {
       $scope.has_team_name = true;
-      socket.emit("buzzer:answer", { teamName: $scope.teamName, answer: $scope.answer });
+      socket.emit("buzzer:answer", { teamName: $scope.teamName, answer: $scope.finalAnswer });
 
       $scope.step = 5;
       console.log("Step 5")

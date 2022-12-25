@@ -28,6 +28,18 @@ angular.module('myApp.controllers').
       }
     })
 
+    socket.on("buzzer:answer", function (data) {
+      [1,2,3].forEach(function (num) {
+        var key = 'player_' + num;
+        if($scope.game[key].name == data.teamName) {
+          console.log($scope.game[key].name, data.teamName)
+
+          $scope.game[key].FJAnswer = data.answer;
+        }
+      })
+
+    }) 
+
     $scope.setResult = function (num, correct) {
       var key = 'player_' + num;
       $scope.result[key][correct ? 'right' : 'wrong'] = !$scope.result[key][correct ? 'right' : 'wrong'];

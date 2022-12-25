@@ -19,6 +19,7 @@
     each i in [1, 2, 3]
       .col-md-4.text-center
         h4(ng-style="{'background-color':active_team == game.player_#{i}.name ? 'green' : '' }") {{ game.player_#{i}.name || 'Player #{i}' }}
+        h4 {{game.player_#{i}.FJAnswer}}
         .btn-group
           button.btn.btn-lg(ng-click='setResult(#{i}, false)', ng-class="{'btn-default':!result.player_#{i}.wrong, 'btn-danger':result.player_#{i}.wrong}")
             span.glyphicon.glyphicon-remove

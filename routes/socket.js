@@ -92,7 +92,7 @@ module.exports = function (io) {
     });
 
     socket.on('buzzer:answer', function (data) {
-
+      console.log('SOCKET buzzer:answer', data);
       socket.broadcast.emit('buzzer:answer', data);
     });
   };
