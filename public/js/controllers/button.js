@@ -5,6 +5,7 @@ angular.module('myApp.controllers').
     $scope.has_team_name = false;
     $scope.can_buzz = false;
     $scope.step = 1;
+    $scope.button_timeout = false;
     console.log("Step 1")
 
     // Step one, get and submit team name
@@ -36,10 +37,26 @@ angular.module('myApp.controllers').
       }
     })
 
+    function timeout_button(){
+      $scope.button_timeout = true;
+      console.log("Button timeout for 250ms started")
+      setTimeout(() => {
+        console.log("Button timeout for 250ms ended")
+        $scope.button_timeout = false;
+      }, 500);
+    }
+
     $scope.press = function () {
+      if($scope.button_timeout){
+        console.log("Button timeout")
+        return
+      }
+      console.log("Not button timeout")
       if($scope.can_buzz){
         socket.emit('buzzer:press', $scope.teamName);
       }
+      timeout_button();
+    
     };
 
     // Wait until final jeopardy for step three
