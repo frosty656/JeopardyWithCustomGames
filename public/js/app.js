@@ -16,7 +16,7 @@ angular.module('myApp', [
   'ui.router'
 ]).
 config(function ($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise("/seasons");
+  $urlRouterProvider.otherwise("/button");
 
   $stateProvider.
     state('seasons', {
