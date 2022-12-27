@@ -1,5 +1,7 @@
-.video-wrapper(ng-if='!game.round')
-  iframe(width="560", height="315", src="https://www.youtube.com/embed/53pg6AlOALs?autoplay=1&loop=1&playlist=53pg6AlOALs", frameborder="0", allowfullscreen)
+script(type="text/javascript" src="./js/QRCode.js")
+div(ng-show='!game.round' style='height:100vh; text-align: center;display: flex;flex-direction: column;align-items: center;')
+  h1 Scan Code to Join Game
+  div(id="qr_code")
 
 each k in ['J', 'DJ']
   .container-fluid.jeopardy-board(ng-show='game.round == "#{k}"')

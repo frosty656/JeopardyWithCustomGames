@@ -2,6 +2,40 @@
 
 angular.module('myApp.controllers').
   controller('BoardCtrl', function ($scope, $timeout, $modal, socket, currencyFilter) {
+
+    // If there is not game then generate a QR code that can be scanned to join the game
+    if (!socket.game) {
+      // Get element qrCode by id
+      var qrCodeElement = document.getElementById('qr_code');
+      console.log(qrCodeElement)
+
+      // get the screen size
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+
+      // Get the smaller dimension
+      var smallerDimension = width < height ? width : height;
+      const finalDimension = smallerDimension * 0.8;
+
+      // Get the current ip address of the server
+      var ip = window.location.hostname;
+      console.log(ip)
+
+      const url = 'http://' + ip + ':3000/#/button';
+
+      var qrCode = new QRCode(qrCodeElement, {
+        text: url,
+        width: finalDimension,
+        height: finalDimension,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+      });
+
+      console.log(qrCode)
+      $scope.qrCode = true;
+    }
+
     socket.emit('board:init');
 
     socket.on('board:init', function (data) {
