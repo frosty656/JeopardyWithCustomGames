@@ -21,7 +21,7 @@ angular.module('myApp.controllers').
       var ip = window.location.hostname;
       console.log(ip)
 
-      const url = 'http://' + ip + ':3000/#/button';
+      const url = 'http://' + ip + '/#/button';
 
       var qrCode = new QRCode(qrCodeElement, {
         text: url,

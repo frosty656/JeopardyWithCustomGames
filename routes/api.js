@@ -97,7 +97,7 @@ function exportRound($, context, r) {
                   .attr("href")
                   .replace(
                     "http://www.j-archive.com/",
-                    "http://localhost:3000/"
+                    "http://localhost/"
                   );
               })
               .toArray()
@@ -137,7 +137,7 @@ function exportRound($, context, r) {
             .map(function (i, element) {
               return $(this)
                 .attr("href")
-                .replace("http://www.j-archive.com/", "http://localhost:3000/");
+                .replace("http://www.j-archive.com/", "http://localhost/");
             })
             .toArray()
         : undefined,
